@@ -126,12 +126,8 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
   const para3 = document.createElement('p'); 
   const span = document.createElement ('span');
 
-  article.append(title);
-  article.append(date);
-  article.append(para1);
-  article.append(para2);
-  article.append(para3);
-  article.append(span);
+  article.append(artTitle, artDate, para1, para2, para3, span);
+  
 
   article.classList.add('article');
   artDate.classList.add('date');
@@ -141,8 +137,8 @@ function createArticle(title, date, firstParagraph, secondParagraph, thirdParagr
     article.classList.toggle('article-open');
   })
 
-  title.textContent = title;
-  date.textContent = date;
+  artTitle.textContent = title;
+  artDate.textContent = date;
   para1.textContent = firstParagraph;
   para2.textContent = secondParagraph;
   para3.textContent = thirdParagraph;
